@@ -1,0 +1,10 @@
+bin
+build
+include
+lib
+local
+man
+venv
+share
+*.pyc
+*.db
