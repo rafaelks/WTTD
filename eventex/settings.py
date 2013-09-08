@@ -1,5 +1,7 @@
 # Django settings for eventex project.
 
+import dj_database_url
+
 from unipath import Path
 PROJECT_DIR = Path(__file__).parent
 
@@ -13,14 +15,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': PROJECT_DIR.child('database.db'),
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
+    'default': dj_database_url.config(default='sqlite:///' + PROJECT_DIR.child('database.db'))
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False

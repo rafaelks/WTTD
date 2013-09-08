@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from django.template import render
+from django.shortcuts import render
 
 
 def homepage(request):
