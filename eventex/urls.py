@@ -6,4 +6,5 @@ from django.conf.urls import patterns, url
 
 urlpatterns = patterns('',
     url(r'^$', 'eventex.core.views.homepage', name='homepage'),
+    url(r'^inscricao/$', 'eventex.subscriptions.views.subscribe', name='subscribe'),
 )
